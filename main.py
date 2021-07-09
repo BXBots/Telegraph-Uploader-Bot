@@ -19,48 +19,49 @@ FayasNoushad = Client(
 DOWNLOAD_LOCATION = os.environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/")
 
 START_TEXT = """
-Hello {}, I am an under 5MB media or file to telegra.ph link uploader bot.
+Hello {}, 
 
-Made by @FayasNoushad
+`I am an under 5MB media or file to telegra.ph link uploader bot`.
+
+👲 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ʙx ʙᴏᴛᴢ](https://t.me/BX_Botz)
 """
 HELP_TEXT = """
 - Just give me a media under 5MB
 - Then I will download it
 - I will then upload it to the telegra.ph link
 
-Made by @FayasNoushad
+👲 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ʙx ʙᴏᴛᴢ](https://t.me/BX_Botz)
 """
 ABOUT_TEXT = """
 - **Bot :** `Telegraph Uploader`
-- **Creator :** [Fayas](https://telegram.me/TheFayas)
-- **Channel :** [Fayas Noushad](https://telegram.me/FayasNoushad)
-- **Source :** [Click here](https://github.com/FayasNoushad/Telegraph-Uploader-Bot)
+- **Creator :** [ᴍʜᴅ ᴍᴜꜰᴀᴢ](https://telegram.me/Mufaz123)
+- **Channel :** [ʙx ʙᴏᴛᴢ](https://telegram.me/BX_Botz)
+- **Source :** [Click here](https://t.me/nokiyirunnoippokitum)
 - **Language :** [Python3](https://python.org)
 - **Library :** [Pyrogram](https://pyrogram.org)
 - **Server :** [Heroku](https://heroku.com)
 """
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Help', callback_data='help'),
-        InlineKeyboardButton('About', callback_data='about'),
-        InlineKeyboardButton('Close', callback_data='close')
+        InlineKeyboardButton('🤖 Bot Updates', url='https://telegram.me/BX_Botz'),
+        InlineKeyboardButton('👥Support Group', url='https://telegram.me/BXSupport')
+        ],[
+        InlineKeyboardButton('⚙️Help', callback_data='help'),
+        InlineKeyboardButton('🔒Close', callback_data='close')
         ]]
     )
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Home', callback_data='home'),
-        InlineKeyboardButton('About', callback_data='about'),
-        InlineKeyboardButton('Close', callback_data='close')
+        InlineKeyboardButton('🏠Home', callback_data='home'),
+        InlineKeyboardButton('🔰About', callback_data='about'),
+        InlineKeyboardButton('🔒Close', callback_data='close')
         ]]
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Channel', url='https://telegram.me/FayasNoushad'),
-        InlineKeyboardButton('Feedback', url='https://telegram.me/TheFayas')
-        ],[
-        InlineKeyboardButton('Home', callback_data='home'),
-        InlineKeyboardButton('Help', callback_data='help'),
-        InlineKeyboardButton('Close', callback_data='close')
+        InlineKeyboardButton('🏠Home', callback_data='home'),
+        InlineKeyboardButton('⚙️Help', callback_data='help'),
+        InlineKeyboardButton('🔒Close', callback_data='close')
         ]]
     )
 
@@ -122,7 +123,7 @@ async def getmedia(bot, update):
         text=f"Error :- <code>{error}</code>"
         reply_markup=InlineKeyboardMarkup(
             [[
-            InlineKeyboardButton('More Help', callback_data='help')
+            InlineKeyboardButton('🛠️Help', callback_data='help')
             ]]
         )
         await message.edit_text(
@@ -131,13 +132,14 @@ async def getmedia(bot, update):
             reply_markup=reply_markup
         )
         return
-    text=f"**Link :-** `https://telegra.ph{response[0]}`\n\n**Join :-** @FayasNoushad"
+    text=f"**Link :-** `https://telegra.ph{response[0]}`\n\n**Join :-** @BX_Botz"
     reply_markup=InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text="Open Link", url=f"https://telegra.ph{response[0]}"),
-        InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}")
+        InlineKeyboardButton(text="📌Open Link📌", url=f"https://telegra.ph{response[0]}"),
+        InlineKeyboardButton(text="⚜️Share Me⚜️", url="https://t.me/share/url?url=%2A%2AHai%20Friends%2C%20%2A%2A%0A%60Here%20We%20Found%20an%20Advanced%20Telegraph%20Uploader%20Bot%60%0ALink%20%40BXTelegraphBot%20Channel%20%40BX_Botz")
         ],[
-        InlineKeyboardButton(text="Join Updates Channel", url="https://telegram.me/FayasNoushad")
+        InlineKeyboardButton(text="🤖 Update Channel", url="https://telegram.me/BX_Botz"),
+        InlineKeyboardButton(text="👥Support Group", url="https://telegram.me/BxSupport")
         ]]
     )
     await message.edit_text(
